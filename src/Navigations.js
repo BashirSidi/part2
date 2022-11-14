@@ -9,24 +9,18 @@ import Profile from './DrawerScreens/ProfileScreen';
 import {Text} from "react-native";
 
 
-const TestStack = createNativeStackNavigator();
-const Test = () => (
-  <TestStack.Navigator
+const MyStack = createNativeStackNavigator();
+const HomeStack = () => (
+  <MyStack.Navigator
     screenOptions={{header: props => <CustomNavigationBar {...props} />}}
   >
-    <TestStack.Screen
-      name="TestStack"
-      component={Bashir}
-      options={{title: 'TestStack.....'}}
+    <MyStack.Screen
+      name="HomeScreen"
+      component={HomeScreen}
+      options={{title: 'Home Screen'}}
     />
-  </TestStack.Navigator>
+  </MyStack.Navigator>
 );
-
-const Bashir = () => {
-  return (
-    <Text>Bashir bashir</Text>
-  )
-}
 
 
 const Drawer = createDrawerNavigator();
@@ -42,7 +36,7 @@ const NavigationContents = ({navigation}) => {
     >
       <Drawer.Screen
         name='Home'
-        component={Test}
+        component={HomeStack}
       />
       <Drawer.Screen
         name="Profile"
