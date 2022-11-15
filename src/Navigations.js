@@ -27,10 +27,10 @@ const Drawer = createDrawerNavigator();
 
 const NavigationContents = ({navigation}) => {
   return (
-    // screenOptions={{drawerPosition:'right'}}
     <Drawer.Navigator
       screenOptions={{
-        headerShown: false
+        headerShown: false,
+        drawerPosition:'right'
       }}
       drawerContent={props => <CustomNavigationDrawer {...props} /> }
     >
